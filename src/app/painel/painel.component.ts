@@ -22,10 +22,10 @@ export class PainelComponent implements OnInit, OnDestroy {
 
   constructor() {
     this.atualizaRodada();
-    console.log(this.rodadaFrase);
+
   }
   ngOnDestroy(): void {
-    console.log("Componente Painel Destruido!!!");
+
   }
 
   ngOnInit(): void {
@@ -38,7 +38,7 @@ export class PainelComponent implements OnInit, OnDestroy {
   public verificarResposta(): void {
 
     if (this.rodadaFrase.frasePtBr.toUpperCase() == this.resposta.toUpperCase()) {
-      alert('A tradução esta correta');
+      // alert('A tradução esta correta');
       this.rodada++;
       if (this.rodada === this.frases.length) {
         this.encerrarJogo.emit('vitoria');
@@ -55,7 +55,7 @@ export class PainelComponent implements OnInit, OnDestroy {
       if (this.tentativas === -1) {
         this.encerrarJogo.emit('derrota');
       }
-      alert('A tradução esta errada');
+      // alert('A tradução esta errada');
     }
 
 
